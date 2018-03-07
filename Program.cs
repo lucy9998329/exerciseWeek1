@@ -72,7 +72,7 @@ namespace exerciseWeek1
             var userInput = Console.ReadLine();
             if (int.TryParse(username, out num1))
             {
-                Console.Wanswer += $"{num2}";
+                Console.WriteLine(answer += $"{num2}");
             }
            
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace exerciseWeek1
 {
@@ -65,7 +66,7 @@ namespace exerciseWeek1
 
             //Task6 - Write a console application that asks the user to enter two numbers, num1 and num2, then swap the two variables and display back to the screen. 
             //(i.e. test data: Enter num1: 8 Enter num2: 5, Expected output: num1 is 5 num2 is 8) 
-            int num1;
+            /*int num1;
             int num2;
             string answer = "";
             Console.Write("Please enter in a number: ");
@@ -73,7 +74,41 @@ namespace exerciseWeek1
             if (int.TryParse(username, out num1))
             {
                 Console.WriteLine(answer += $"{num2}");
-            }
+            }*/
+
+
+            
+           //Task7 - Write a console application that takes three numbers from the user and displays the largest number on the screen.
+           int num1, num2, num3;
+           string answer = "";
+           Console.Write("Please enter in the first number: ");
+           
+           var isNum1 = int.TryParse(Console.ReadLine(), out num1);
+
+           Console.Write("Please enter in a second number: ");
+           
+           var isNum2 = int.TryParse(Console.ReadLine(), out num2);
+
+           Console.Write("Please enter in the third number: ");
+           
+           var isNum3 = int.TryParse(Console.ReadLine(), out num3);
+           
+           if (isNum1 && isNum2 && isNum3){
+               var arr = new int[] {num1, num2, num3}; 
+
+               int maxValue = arr.Max();
+               int maxIndex = arr.ToList().IndexOf(maxValue);
+
+                Console.WriteLine(maxValue);
+                Console.WriteLine(maxIndex);
+
+
+           }
+
+           
+        //    int maxValue = anArray.Max();
+//  int maxIndex = anArray.ToList().IndexOf(maxValue);
+
            
 
             
